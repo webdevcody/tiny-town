@@ -1,0 +1,6 @@
+{
+  "name": "Biogas Plant",
+  "category": "utilities",
+  "footprint": [1, 1],
+  "description": "Farm-scale anaerobic digestion plant: two concrete digester tanks under green double-membrane gas domes, a black-sheeted silage clamp weighed down with tyres, a solids feeder, a green CHP engine container and a burning gas flare."
+}
