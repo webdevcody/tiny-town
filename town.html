@@ -2,13 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tiny Town — town view</title>
-    <link rel="stylesheet" href="/src/app/style.css" />
+    <meta http-equiv="refresh" content="0; url=./world.html" />
+    <script>location.replace('./world.html' + location.search);</script>
   </head>
-  <body class="viewer">
-    <canvas id="view-canvas"></canvas>
-    <div class="hud" id="hud">Loading town…</div>
-    <script type="module" src="/src/app/town.js"></script>
-  </body>
+  <body><a href="./world.html">The town view moved to the world view.</a></body>
 </html>

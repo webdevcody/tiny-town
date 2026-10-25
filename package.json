@@ -9,7 +9,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "shots": "node scripts/shots.mjs",
-    "check": "node scripts/check.mjs"
+    "check": "node scripts/check.mjs",
+    "world": "node scripts/world-shots.mjs"
   },
   "dependencies": {
     "three": "^0.186.1"

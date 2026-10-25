@@ -38,7 +38,7 @@ function renderHud(obj) {
   const m = entry.meta;
   const size = new THREE.Box3().setFromObject(obj).getSize(new THREE.Vector3());
   hud.innerHTML = `
-    <a href="./">← gallery</a>
+    <a href="./">← gallery</a> · <a href="./world.html?b=${encodeURIComponent(entry.slug)}">show in world</a>
     <h2>${esc(m.name)}</h2>
     <div class="row"><span class="badge">${esc(m.category)}</span> &nbsp;${m.footprint[0]}×${m.footprint[1]} tiles · <code>${esc(entry.slug)}</code></div>
     <div class="row">${esc(m.description)}</div>
