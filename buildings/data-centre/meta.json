@@ -1,0 +1,6 @@
+{
+  "name": "Data Centre",
+  "category": "office",
+  "footprint": [2, 1],
+  "description": "Windowless grey server hall with two rows of rooftop chillers, a line of yellow backup generators, bunded diesel fuel tanks, a guard booth and a double security fence topped with barbed wire."
+}
