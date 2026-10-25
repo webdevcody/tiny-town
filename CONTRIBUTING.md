@@ -14,7 +14,7 @@ stays inside its own folder.
 1. **Touch only `buildings/<slug>/`.** Nothing else, not even a typo fix.
 2. **Add no dependencies.** Do not change `package.json` or `package-lock.json`.
 3. **Do not edit shared files:** `src/lib/**` (frozen), `src/app/**`, `index.html`,
-   `view.html`, `town.html`, `shots.html`, `vite.config.js`, `scripts/**`,
+   `view.html`, `world.html`, `town.html`, `shots.html`, `vite.config.js`, `scripts/**`,
    `CATALOGUE.md`, `README.md`, this file. The gallery finds your building on
    its own; there is no list to register it in.
 4. Use the **slug, name, category and footprint from [CATALOGUE.md](CATALOGUE.md)**.

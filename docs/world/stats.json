@@ -1,0 +1,99 @@
+{
+  "info": {
+    "buildings": 200,
+    "sourceMeshes": 68443,
+    "mergedMeshes": 2896,
+    "triangles": 1666133,
+    "trees": 928,
+    "roadTiles": 467,
+    "tiles": [
+      36,
+      36
+    ],
+    "districts": [
+      {
+        "name": "Downtown",
+        "blocks": 4,
+        "buildings": 22
+      },
+      {
+        "name": "Shopping district",
+        "blocks": 4,
+        "buildings": 22
+      },
+      {
+        "name": "Civic quarter",
+        "blocks": 5,
+        "buildings": 22
+      },
+      {
+        "name": "Parks & leisure",
+        "blocks": 6,
+        "buildings": 22
+      },
+      {
+        "name": "Suburbs",
+        "blocks": 4,
+        "buildings": 23
+      },
+      {
+        "name": "Farmland",
+        "blocks": 5,
+        "buildings": 23
+      },
+      {
+        "name": "Utilities",
+        "blocks": 5,
+        "buildings": 22
+      },
+      {
+        "name": "Industrial zone",
+        "blocks": 7,
+        "buildings": 22
+      },
+      {
+        "name": "Transport hub",
+        "blocks": 4,
+        "buildings": 22
+      }
+    ],
+    "buildMs": 105192,
+    "mergeMs": 410,
+    "batch": {
+      "meshes": 68443,
+      "parts": 79241,
+      "vertices": 2893455
+    },
+    "slowest": [
+      "pagoda-temple 6007ms",
+      "pink-granite-tower 3210ms",
+      "neon-nightclub 2702ms",
+      "cube-houses 2682ms",
+      "hospital 2658ms"
+    ]
+  },
+  "wide": {
+    "fps": 0.3,
+    "drawCalls": 2936,
+    "triangles": 1707582,
+    "frameMs": 3015.3,
+    "geometries": 2907,
+    "textures": 1499
+  },
+  "rotated": {
+    "fps": 0.2,
+    "drawCalls": 2936,
+    "triangles": 1707582,
+    "frameMs": 4997.5,
+    "geometries": 2907,
+    "textures": 1499
+  },
+  "close": {
+    "fps": 0.4,
+    "drawCalls": 2747,
+    "triangles": 1674394,
+    "frameMs": 102.2,
+    "geometries": 2908,
+    "textures": 1499
+  }
+}

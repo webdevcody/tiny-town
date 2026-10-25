@@ -69,3 +69,42 @@ body.viewer { overflow: hidden; height: 100vh; }
 .hud button:hover { border-color: var(--accent); }
 .hud select { width: 100%; margin-top: 10px; padding: 5px; background: var(--panel2); color: var(--text); border: 1px solid #4a5a72; border-radius: 6px; }
 .err { color: #ff9a9a; white-space: pre-wrap; font-family: ui-monospace, monospace; font-size: 12px; }
+
+/* world */
+.hud .links { display: flex; gap: 10px; font-size: 13px; margin-bottom: 6px; }
+.hud .links b { color: var(--text); }
+.world-hud { width: 300px; }
+.search-wrap { position: relative; margin-top: 10px; }
+.search-wrap input {
+  width: 100%; padding: 6px 9px; border-radius: 6px; border: 1px solid #4a5a72;
+  background: var(--panel2); color: var(--text); font-size: 13px;
+}
+#results {
+  position: absolute; left: 0; right: 0; top: 100%; margin: 4px 0 0; padding: 4px 0; list-style: none; z-index: 3;
+  background: #232c39; border: 1px solid #4a5a72; border-radius: 6px; max-height: 320px; overflow-y: auto;
+}
+#results li { padding: 5px 10px; cursor: pointer; font-size: 13px; display: flex; justify-content: space-between; gap: 8px; }
+#results li span { color: var(--muted); font-size: 11px; text-transform: uppercase; }
+#results li.on, #results li:hover { background: var(--panel2); }
+#results li.none { color: var(--muted); cursor: default; }
+.hud .toggles { margin-top: 8px; gap: 14px; }
+.hud .toggles label { font-size: 12px; color: var(--muted); display: flex; gap: 5px; align-items: center; }
+.hud .help { font-size: 12px; margin-top: 10px; }
+.hud.info { top: auto; bottom: 16px; left: 16px; width: 320px; }
+.hud.info h3 { margin: 0 24px 4px 0; font-size: 18px; }
+.hud.info .close { position: absolute; top: 8px; right: 8px; font-size: 16px; line-height: 1; padding: 2px 7px; }
+.stats {
+  position: fixed; right: 12px; bottom: 10px; font: 12px ui-monospace, monospace; color: #cfd8e3;
+  background: rgba(29, 37, 48, 0.75); padding: 4px 8px; border-radius: 6px; pointer-events: none;
+}
+#labels { position: fixed; inset: 0; pointer-events: none; overflow: hidden; }
+.district-label {
+  position: absolute; left: 0; top: 0; white-space: nowrap; font-size: 13px; font-weight: 700; letter-spacing: 0.6px;
+  text-transform: uppercase; color: #fff; text-shadow: 0 1px 2px #000, 0 0 6px rgba(0, 0, 0, 0.6);
+  background: rgba(29, 37, 48, 0.45); padding: 2px 8px; border-radius: 4px;
+}
+#loading { position: fixed; inset: 0; display: grid; place-items: center; background: rgba(20, 26, 36, 0.6); }
+#loading .box { background: var(--panel); padding: 18px 22px; border-radius: 10px; border: 1px solid #3a475c; width: 360px; font-size: 14px; }
+#loading .bar { height: 6px; background: #3a475c; border-radius: 3px; margin-top: 10px; overflow: hidden; }
+#progress { height: 100%; width: 0; background: var(--accent); transition: width 0.2s; }
+.hud button svg { vertical-align: -2px; }
