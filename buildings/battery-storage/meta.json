@@ -1,0 +1,6 @@
+{
+  "name": "Battery Storage Farm",
+  "category": "utilities",
+  "footprint": [1, 1],
+  "description": "Fenced grid-scale battery yard: three rows of white battery enclosures with rooftop cooling fans, blue-grey inverter cabinets, a pad-mounted step-up transformer, cable trays, floodlight/CCTV poles and a green entrance sign."
+}
