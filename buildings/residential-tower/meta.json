@@ -1,0 +1,6 @@
+{
+  "name": "Residential Point Tower",
+  "category": "residential",
+  "footprint": [1, 1],
+  "description": "Twenty-storey beige tower with corner balconies, a lobby canopy and a rooftop lift machine room."
+}
