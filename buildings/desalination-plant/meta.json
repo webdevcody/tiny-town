@@ -1,0 +1,6 @@
+{
+  "name": "Desalination Plant",
+  "category": "utilities",
+  "footprint": [2, 1],
+  "description": "Seaside reverse-osmosis plant: a quay with a seawater intake pipe and pump house, a long membrane hall plus an open rack hall of white pressure vessels, blue product-water tanks and a foaming brine outfall."
+}
