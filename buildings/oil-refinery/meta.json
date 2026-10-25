@@ -1,0 +1,6 @@
+{
+  "name": "Oil Refinery",
+  "category": "industrial",
+  "footprint": [3, 3],
+  "description": "Refinery with tall distillation columns ringed by platforms, colour-coded pipe racks, a lattice flare stack with a burning flame, a bunded farm of round storage tanks, LPG spheres, a fired heater, control building and a tanker loading bay."
+}
