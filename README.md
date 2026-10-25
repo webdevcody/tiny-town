@@ -6,7 +6,7 @@ Each building lives in its own folder and is built in its own PR.
 ![Gallery](docs/gallery.png)
 
 ```bash
-npm install
+npm run setup                   # new box: deps + headless Chrome + system libs + test render
 npm run dev                     # gallery at http://localhost:5173/
 npm run check                   # validate every building (or: npm run check -- <slug>)
 npm run shots -- <slug>         # render buildings/<slug>/shots/*.png in headless Chrome

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // npm run shots -- <slug> [<slug> ...] [--size=800x600]
 // npm run shots                     (all buildings)
+// --out=<dir>  write to <dir>/<slug>/ instead of buildings/<slug>/shots/ (used by npm run setup)
 //
 // Starts a Vite dev server, opens shots.html in headless Chrome with SOFTWARE
 // WebGL (SwiftShader, no GPU needed), renders every preset view with a fixed
@@ -11,7 +12,7 @@ import puppeteer from 'puppeteer';
 import UPNG from 'upng-js';
 import { mkdir, writeFile, readdir, stat } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
-import { join, resolve } from 'node:path';
+import { join, resolve, relative } from 'node:path';
 
 const ROOT = resolve(import.meta.dirname, '..');
 const BUILDINGS_DIR = join(ROOT, 'buildings');
@@ -35,12 +36,14 @@ function quantize(png) {
 }
 
 function parseArgs(argv) {
-  const opts = { slugs: [], width: 800, height: 600 };
+  const opts = { slugs: [], width: 800, height: 600, out: null };
   for (const a of argv) {
     if (a.startsWith('--size=')) {
       const [w, h] = a.slice(7).split('x').map(Number);
       opts.width = w;
       opts.height = h;
+    } else if (a.startsWith('--out=')) {
+      opts.out = resolve(a.slice(6));
     } else if (!a.startsWith('--')) opts.slugs.push(a.replace(/^buildings\//, '').replace(/\/$/, ''));
   }
   return opts;
@@ -121,7 +124,7 @@ async function main() {
         }
       }
       if (!shots) continue;
-      const dir = join(BUILDINGS_DIR, slug, 'shots');
+      const dir = opts.out ? join(opts.out, slug) : join(BUILDINGS_DIR, slug, 'shots');
       await mkdir(dir, { recursive: true });
       let bytes = 0;
       for (const [view, dataUrl] of Object.entries(shots)) {
@@ -129,7 +132,7 @@ async function main() {
         await writeFile(file, quantize(Buffer.from(dataUrl.split(',')[1], 'base64')));
         bytes += (await stat(file)).size;
       }
-      console.log(`✓ ${slug}: ${Object.keys(shots).length} shots → buildings/${slug}/shots/ (${Math.round(bytes / 1024)} KB, ${((Date.now() - t) / 1000).toFixed(1)}s)`);
+      console.log(`✓ ${slug}: ${Object.keys(shots).length} shots → ${dir.startsWith(ROOT) ? relative(ROOT, dir) : dir}/ (${Math.round(bytes / 1024)} KB, ${((Date.now() - t) / 1000).toFixed(1)}s)`);
       for (const e of errors.splice(0)) console.warn('  ⚠ ' + e);
     }
   } finally {

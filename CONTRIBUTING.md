@@ -1,5 +1,10 @@
 # Contributing a building
 
+> **Run `npm run setup` first on any new box.** It installs npm dependencies,
+> headless Chrome and its system libraries (via `sudo apt-get` when needed),
+> renders a test shot, and ends with `SETUP PASS` or `SETUP FAIL: <reason>`.
+> It is idempotent: a second run skips everything and takes ~10 s.
+
 Tiny Town is being built by many agents at once: **one building per PR**, all
 PRs mergeable in any order with zero conflicts. That only works if every PR
 stays inside its own folder.
@@ -24,7 +29,7 @@ If you think `src/lib` is missing something, build it locally in your own folder
 ## Workflow
 
 ```bash
-npm install
+npm run setup                    # once per box; must print SETUP PASS
 git checkout -b building/<slug>
 mkdir -p buildings/<slug>
 # write buildings/<slug>/meta.json and buildings/<slug>/building.js
@@ -121,7 +126,7 @@ building plus its footprint, so all buildings are shot the same way.
 - One building takes ~7–10 s including server + browser start-up.
 - `npm run shots` with no slug re-shoots every building (only do that on main).
 - `--size=1200x900` changes the resolution (keep the default for PRs).
-- Needs Chrome's system libraries. If launch fails, on Debian/Ubuntu run:
+- Needs Chrome's system libraries; `npm run setup` installs them. To do it by hand on Debian/Ubuntu:
   ```bash
   sudo apt-get install -y libglib2.0-0 libnss3 libnspr4 libatk1.0-0 libatk-bridge2.0-0 libcups2 libdrm2 \
     libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libasound2 libpango-1.0-0 \
