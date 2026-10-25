@@ -182,11 +182,11 @@ function waterTower() {
   g.add(place(cylinder(R, R * 1.05, 2.3, wood, 14), { y: legH + 0.15 }));
   for (const y of [0.5, 1.2, 1.9]) g.add(place(cylinder(R * 1.07, R * 1.07, 0.07, steel, 14), { y: legH + 0.15 + y }));
   g.add(place(cone(R * 1.1, 0.9, mat('#5b4a3a'), 14), { y: legH + 2.45 }));
-  g.add(place(sphere2(), { y: legH + 3.3 }));
+  g.add(place(finial(), { y: legH + 3.3 }));
   return g;
 }
 
-function sphere2() {
+function finial() {
   return cylinder(0.08, 0.08, 0.25, metal(PALETTE.steelDark), 6);
 }
 
