@@ -1,0 +1,6 @@
+{
+  "name": "Airport Terminal",
+  "category": "transport",
+  "footprint": [3, 2],
+  "description": "Terminal with a swooping roof, glass front, jet bridges and a parked airliner."
+}
