@@ -1,0 +1,6 @@
+{
+  "name": "Satellite Ground Station",
+  "category": "utilities",
+  "footprint": [2, 1],
+  "description": "Fenced earth station compound with big white steerable parabolic dishes pointing skyward, a geodesic radome on a drum and a low operations building with waveguide bridges, generator and staff car park."
+}
