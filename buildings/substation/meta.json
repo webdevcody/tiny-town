@@ -1,0 +1,6 @@
+{
+  "name": "Electrical Substation",
+  "category": "utilities",
+  "footprint": [1, 1],
+  "description": "Fenced gravel compound with two grey-green transformers behind a firewall, lattice insulator gantry, tubular busbars on post insulators, a small brick control hut and high-voltage warning signs."
+}
